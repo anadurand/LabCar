@@ -4,6 +4,7 @@
 .rale{
   font-family: 'Raleway', sans-serif;
 }
+/*seccion de barra de navegacion*/
 .navbar{
   margin: 0;
 }
@@ -12,7 +13,6 @@
   justify-content: space-between;
   align-items: center;
   height: 18vh;
-  font-family: 'Open Sans', sans-serif;
 }
 .menu-header li a{
   text-decoration: none;
@@ -37,6 +37,7 @@
   color: black;
   font-size: 2rem;
 }
+/*seccion presentacion*/
 .presentacion{
   margin: 0;
   padding: 0;
@@ -48,7 +49,6 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  font-family: 'Raleway', sans-serif;
 }
 .registro{
   background-color: #f7b617;
@@ -95,19 +95,16 @@
   font-weight: 800;
   font-size: 2.3rem;
 }
+/*seccion informacion*/
 .info{
   background-color: #f7b617;
   height: 530px;
-  font-family: 'Open Sans', sans-serif;
   color: white;
 }
 .mobile-center{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-}
-.info-title{
-  font-family: 'Raleway', sans-serif;
 }
 .informacion{
   border: 1px solid white;
@@ -129,33 +126,29 @@
 .info h3{
   margin-top: 40px;
 }
+/*seccion conduce*/
 .conduce{
   background-image: url("../img/conduce.jpg");
   background-repeat: no-repeat;
   width: 100%;
-  height: 78vh;
   background-size: cover;
   background-position: center;
 }
 .conduce-info{
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  height: 65vh;
+  height: 60vh;
   padding-top: 80px;
   padding-left: 35px;
 
 }
-.conduce h2{
-  font-family: 'Raleway', sans-serif;
-}
 .conduce p{
-  font-family: 'Open Sans', sans-serif;
   font-size: 1.8rem;
 }
 .conduce button{
-  font-family: 'Open Sans', sans-serif;
   background-color: #f7b617;
 }
+/*seccion tarifa*/
 .tarifa{
   height: 580px;
   background-color: #f7b617;
@@ -173,7 +166,6 @@
   width: 100%;
   height: 100%;
 }
-
 .tarifa p{
   margin: 25px 0;
   font-size: 2rem;
@@ -229,10 +221,9 @@
 
 /*estilo del footer*/
 footer{
-  min-height: 600px;
   background-color: #2B2B2B;
   color: white;
-  padding: 5% 0;
+  padding: 2% 0;
 }
 footer .img-logo{
   padding: 20px 0;
@@ -305,8 +296,8 @@ footer .copy{
   .mobile-center{
     justify-content: flex-start;
   }
-  .conduce{
-    height: 65vh;
+  .conduce-info{
+    height: 68vh;
   }
   .tarifa{
     height: 650px;

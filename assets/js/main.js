@@ -3,8 +3,8 @@ var map;
 var tarifa = document.getElementById("tarifaResultado")
 function initMap(){
       map = new google.maps.Map(document.getElementById('map'), {
-         center: {lat: -34.397, lng: 150.644},
-         zoom: 8
+         center: {lat: -10, lng: -76},
+         zoom: 3
        });
     function buscar(){
       if(navigator.geolocation){
