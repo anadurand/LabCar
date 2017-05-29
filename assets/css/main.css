@@ -1,5 +1,5 @@
 .navbar{
-  margin-bottom: 0!important;
+  margin-bottom: 0;
 }
 .menu-header{
   display: flex;
@@ -37,12 +37,123 @@
   background-image: url("../img/taxi.jpg");
   background-repeat: no-repeat;
   width: 100%;
-  height: 125vh;
+  height: 124vh;
   background-size: contain;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: 'Raleway', sans-serif;
+}
+.registro{
+  background-color: #f7b617;
+  display: inline-block;
+  width: 360px;
+  min-height: 340px;
+  color: white;
+  padding-top: 20px;
+  padding-left: 40px;
+}
+.registro h2{
+  font-size: 3.8rem;
+  font-weight: 600;
+}
+.registro h3{
+  display: inline-block;
+  margin-right: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
+.formulario{
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  padding-left: 15px;
+  margin-top: 20px;
+}
+.formulario .form-control{
+  background-color: #f7b617;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  border-bottom: 1px solid white;
+  width: 80%!important;
+}
+.form-control:focus, .form.group:focus{
+  border-bottom: 1px solid white;
+  outline: 0;
+  box-shadow: none;
+}
+.boton{
+  margin-top: 60px;
+  font-weight: 800;
+  font-size: 2.3rem;
+}
+.info{
+  background-color: #f7b617;
+  height: 530px;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+}
+.mobile-center{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.info-title{
+  font-family: 'Raleway', sans-serif;
+}
+.informacion{
+  border: 1px solid white;
+  padding: 30px 0;
+  margin-top: 40px;
+}
+.informacion p{
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+.celular{
+  width: 65%;
+  height: 250px;
+  margin-top: 5px;
+}
+.imagen{
+  text-align: center;
+}
+.info h3{
+  margin-top: 40px;
+}
+.conduce{
+  background-image: url("../img/conduce.jpg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 65vh;
+  background-size: cover;
+  background-position: center;
+}
+.conduce-info{
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  height: 65vh;
+  padding-top: 80px;
+  padding-left: 35px;
 
-
+}
+.conduce h2{
+  font-family: 'Raleway', sans-serif;
+}
+.conduce p{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.8rem;
+}
+.conduce button{
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f7b617;
+}
+.tarifa{
+  height: 75vh;
+  background-color: #f7b617;
+}
 @media (min-width:600px){
   .logo{
     float: left;
@@ -51,5 +162,35 @@
     height: 105vh;
     background-size: cover;
     background-position: 0 -184vh;
+  }
+  .registro{
+    width: 41%;
+    min-height: 400px;
+  }
+  .logo-blanco{
+    width: 100px;
+  }
+  .boton{
+    margin-top: 30px;
+    font-size: 2rem;
+  }
+  .registro h2{
+    margin-bottom: 20px;
+    font-size: 3.5rem;
+  }
+  .celular{
+    height: 350px;
+  }
+  .info{
+    height: 80vh;
+  }
+  .informacion{
+    border: 1px solid white;
+    border-left: none;
+    padding: 50px 0;
+    margin-top: 40px;
+  }
+  .mobile-center{
+    justify-content: flex-start;
   }
 }
