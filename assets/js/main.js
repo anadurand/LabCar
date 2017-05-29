@@ -1,5 +1,6 @@
 //ejecuta la funcion cuando se carga la pagina
 var map;
+var tarifa = document.getElementById("tarifaResultado")
 function initMap(){
       map = new google.maps.Map(document.getElementById('map'), {
          center: {lat: -34.397, lng: 150.644},
@@ -29,7 +30,7 @@ function initMap(){
     }
 
     buscar();
-    //input
+    //input de partida y llegada
     var inputPartida = document.getElementById("partida");
     var inputDestino = document.getElementById("llegada");
 
@@ -47,7 +48,7 @@ function initMap(){
       }, function(response, status){
             if(status ==='OK'){
               var distancia = Number((response.routes[0].legs[0].distance.text.replace("km","")).replace(",","."));
-              tarifa.classList.remove("none");
+              tarifa.classList.remove("hidden");
               var costo = distancia * 1.75;
               if(costo < 4){
                 tarifa.innerHTML = "S/. 4";
@@ -56,7 +57,6 @@ function initMap(){
               }
               if(miUbicacion!==undefined){
                 miUbicacion.setMap(null);
-
               }
               directionsDisplay.setDirections(response);
             }else{
@@ -70,5 +70,5 @@ function initMap(){
       // e.preventDefault();
       calculateAndDisplayRoute(directionsService,directionsDisplay);
     };
-    // document.getElementById("trazar-Ruta").addEventListener("click",trazarRuta)
+     document.getElementById("trazarRuta").addEventListener("click",trazarRuta)
 };

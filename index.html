@@ -93,13 +93,14 @@
           <form class="trazar-ruta">
             <div class="form-group col-xs-12">
               <label for="partida" class=""><img src="assets/img/circulo.png" alt=""></label>
-              <input type="email" class="form-control" id="partida" placeholder="Ingrese punto de partida">
+              <input type="text" class="form-control" id="partida" placeholder="Ingrese punto de partida">
             </div>
             <div class="form-group col-xs-12">
               <label for="llegada" class=""><img src="assets/img/flecha.png" alt=""></label>
-              <input type="password" class="form-control" id="llegada" placeholder="Ingrese un destino">
+              <input type="text" class="form-control" id="llegada" placeholder="Ingrese un destino">
             </div>
-            <button type="button" class="btn btn-default col-md-5 btn-ruta rale">¡TRAZAR RUTA!</button>
+            <button type="button" class="btn btn-default col-md-5 btn-ruta rale" id="trazarRuta">¡TRAZAR RUTA!</button>
+            <div class="tarifa-resultado" id="tarifaResultado"></div>
           </form>
         </div>
         <div class="col-md-5 col-md-offset-1 mapa hidden-xs hidden-sm">
