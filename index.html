@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800|Raleway:400,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Lab Car</title>
   </head>
   <body>
@@ -38,7 +39,7 @@
         </div>
       </div>
     </nav>
-    <header class="presentacion">
+    <header class="presentacion container-fluid">
       <div class="registro">
           <h2 class="hidden-xs hidden-sm">Disfruta del viaje <br>Eres dueño de tu tiempo</h2>
           <h2 class="visible-xs">Comienza a <br>viajar con</h2>
@@ -84,13 +85,89 @@
         </div>
       </div>
     </section>
-    <section class="tarifa">
-
+    <section class="tarifa container-fluid">
+      <div class="row">
+        <div class="col-md-4 col-xs-12 col-md-offset-1">
+          <h2 class="rale">Tarifas</h2>
+          <p class="o-s">Consulta las tarifas LabCar aquí</p>
+          <form class="trazar-ruta">
+            <div class="form-group col-xs-12">
+              <label for="partida" class=""><img src="assets/img/circulo.png" alt=""></label>
+              <input type="email" class="form-control" id="partida" placeholder="Ingrese punto de partida">
+            </div>
+            <div class="form-group col-xs-12">
+              <label for="llegada" class=""><img src="assets/img/flecha.png" alt=""></label>
+              <input type="password" class="form-control" id="llegada" placeholder="Ingrese un destino">
+            </div>
+            <button type="button" class="btn btn-default col-md-5 btn-ruta rale">¡TRAZAR RUTA!</button>
+          </form>
+        </div>
+        <div class="col-md-5 col-md-offset-1 mapa hidden-xs hidden-sm">
+          <div class="" id="map"></div>
+        </div>
+      </div>
     </section>
+    <footer class="container-fluid o-s">
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 img-logo">
+          <img src="assets/img/logo-blanco.png" alt="">
+        </div>
+      </div>
+      <div class="row  menu-lista">
+        <div class="col-xs-10 col-md-offset-1">
+          <div class="col-xs-6 col-md-3 col-xs-offset-6 col-md-offset-0 pd-0">
+            <div class="social-media-icon">
+              <ul class="list-unstyled app-media">
+                <li><span class="icon-facebook"></span></li>
+                <li><span class="icon-twitter"></span></li>
+                <li><span class="icon-linkedin2"></span></li>
+                <li><span class="icon-appleinc"></span></li>
+                <li><span class="icon-play3"></span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-6 col-md-3">
+            <ul class="list-unstyled">
+              <li>Viaja</li>
+              <li>Conduce</li>
+              <li>Ciudades</li>
+              <li>Ciudades</li>
+              <li>Entregas</li>
+              <li>Cómo funciona?</li>
+              <li>Países</li>
+              <li>Seguridad</li>
+            </ul>
+          </div>
+          <div class="col-xs-6 col-md-3 hidden-xs">
+            <ul class="list-unstyled">
+              <li>Oportunidades</li>
+              <li>Nuestra historia</li>
+              <li>API de LabCar</li>
+              <li>Eventos</li>
+              <li>Desarroladores</li>
+              <li>Servicios</li>
+              <li>Laboratoria</li>
+              <li>Coders</li>
+            </ul>
+          </div>
+          <div class="col-xs-6 col-md-3">
+            <ul class="list-unstyled app-store">
+              <li><img src="assets/img/app-store.png" alt=""></li>
+              <li><img src="assets/img/google-play.png" alt=""></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 text-center copy">
+          <p>© 2017 LabCar technologies Inc.</p>
+        </div>
+      </div>
+    </footer>
+    <!--  AIzaSyAkLlcVuh-u9c6KI8XnMbtta4rTORRyyXk   clave API-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkLlcVuh-u9c6KI8XnMbtta4rTORRyyXk&callback=initMap&libraries=places" async defer></script>
     <script src="assets/js/jquery-3.2.1.slim.min.js" charset="utf-8"></script>
     <script src="assets/js/bootstrap.js" charset="utf-8"></script>
     <script src="assets/js/main.js" charset="utf-8"></script>
-    <!--  AIzaSyAkLlcVuh-u9c6KI8XnMbtta4rTORRyyXk   clave API-->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkLlcVuh-u9c6KI8XnMbtta4rTORRyyXk&callback=initMap" async defer></script>
   </body>
 </html>
