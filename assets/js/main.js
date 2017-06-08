@@ -6,14 +6,8 @@ function initMap(){
          center: {lat: -10, lng: -76},
          zoom: 3
        });
-    function buscar(){
-      if(navigator.geolocation){
-        navigator.geolocation.getCurrentPosition(funcionExito, funcionError);
-      }
-    }
-
     var latitud,longitud,miUbicacion;
-    var funcionExito = function(posicion){
+    var funcionPosicion = function(posicion){
       latitud = posicion.coords.latitude;
       longitud = posicion.coords.longitude;
       miUbicacion = new google.maps.Marker({
@@ -22,14 +16,14 @@ function initMap(){
       });
       map.setZoom(18);
       map.setCenter({lat:latitud, lng:longitud});
-
     }
-
     var funcionError = function(error){
-      alert("Tenemos un problema con encontrar tu ubicación");
+      alert("Browser doesn't support Geolocation");
     }
 
-    buscar();
+    if(navigator.geolocation){
+      navigator.geolocation.getCurrentPosition(funcionPosicion, funcionError);
+    }
     //input de partida y llegada
     var inputPartida = document.getElementById("partida");
     var inputDestino = document.getElementById("llegada");
@@ -40,16 +34,16 @@ function initMap(){
     var directionsService = new google.maps.DirectionsService;
     var directionsDisplay = new google.maps.DirectionsRenderer;
 
-    var calculateAndDisplayRoute = function(directionsService, directionsDisplay){
+    var calculateRoute = function(directionsService, directionsDisplay){
       directionsService.route({
         origin: inputPartida.value,
         destination: inputDestino.value,
         travelMode: 'DRIVING'
       }, function(response, status){
             if(status ==='OK'){
-              var distancia = Number((response.routes[0].legs[0].distance.text.replace("km","")).replace(",","."));
+              var km = Number((response.routes[0].legs[0].distance.text.replace("km","")).replace(",","."));
               tarifa.classList.remove("hidden");
-              var costo = distancia * 1.75;
+              var costo = km * 1.75;
               if(costo < 4){
                 tarifa.innerHTML = "S/. 4";
               }else{
@@ -68,7 +62,7 @@ function initMap(){
     directionsDisplay.setMap(map);
     var trazarRuta = function(e){
       // e.preventDefault();
-      calculateAndDisplayRoute(directionsService,directionsDisplay);
+      calculateRoute(directionsService,directionsDisplay);
     };
      document.getElementById("trazarRuta").addEventListener("click",trazarRuta)
 };
